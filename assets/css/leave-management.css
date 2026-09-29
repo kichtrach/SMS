@@ -72,3 +72,43 @@ body.calendar-open .lm-page, body.calendar-open #sidebar-component, body.calenda
 .leave-overlay:not(.show){pointer-events:none!important;visibility:hidden!important;}
 .leave-overlay.show{pointer-events:auto!important;visibility:visible!important;}
 .generic-calendar,.enh-calendar{pointer-events:auto!important;}
+
+/* v5 calendar click-through safety: popup occupies only its visible box. */
+body>.generic-calendar,body>.enh-calendar{
+  inset:auto!important;
+  right:auto!important;
+  bottom:auto!important;
+  width:310px!important;
+  height:auto!important;
+  max-width:calc(100vw - 16px)!important;
+  pointer-events:auto!important;
+  overflow:visible!important;
+}
+.generic-calendar::before,.generic-calendar::after,.enh-calendar::before,.enh-calendar::after{pointer-events:none!important}
+.leave-overlay:not(.show),.action-overlay:not(.show){display:none!important;visibility:hidden!important;pointer-events:none!important}
+
+/* v9: single-owner main calendar controls + header layout safety */
+.date-chip,.lm-filters .range{cursor:pointer;position:relative;z-index:1}
+.generic-calendar.lm-calendar-v8{z-index:12000!important;pointer-events:auto!important}
+.lm-head,.lm-filters,.lm-stats,.lm-grid{position:relative;z-index:auto}
+.lm-page{overflow-x:hidden}
+.head-actions{flex-shrink:0}
+@media(max-width:980px){.lm-head{align-items:flex-start;gap:12px;flex-wrap:wrap}.head-actions{margin-left:auto}.lm-filters{grid-template-columns:repeat(2,minmax(180px,1fr))}.lm-filters .lm-btn{width:100%}}
+/* v12 calendar: direct-trigger implementation */
+#lmHeaderDate,#lmDateRange{pointer-events:auto!important;cursor:pointer!important;touch-action:manipulation;}
+.lm-calendar-v12{z-index:2147483000!important;display:block!important;visibility:visible!important;pointer-events:auto!important;}
+.lm-calendar-v12 .cal-week,.lm-calendar-v12 .cal-days{display:grid!important;grid-template-columns:repeat(7,1fr)!important;gap:4px!important;}
+.lm-calendar-v12 .cal-week span{text-align:center;font-size:11px;font-weight:600;color:#6a78a8;padding:5px 0;}
+.lm-calendar-v12 .cal-days .cal-day{height:34px;border:0;background:#fff;border-radius:4px;color:#1a2d8e;cursor:pointer;}
+.lm-calendar-v12 .cal-days .cal-day:hover{background:#f1edff;color:#5b2bd7;}
+.lm-calendar-v12 .cal-days .cal-day.selected{background:linear-gradient(90deg,#6c39d7 0%,#7939ed 100%)!important;color:#fff!important;font-weight:700;}
+.lm-calendar-v12 .cal-days .cal-day.in-range{background:#eee8ff!important;color:#5125d8!important;}
+.lm-calendar-v12 .cal-empty{height:34px;}
+/* v13 isolated declarative calendars: intentionally not .generic-calendar to avoid legacy handlers */
+#lmHeaderDate,#lmDateRange{position:relative!important;z-index:3!important;pointer-events:auto!important;cursor:pointer!important}
+.lm-native-calendar{position:fixed;margin:0;width:310px;padding:14px;background:#fff;border:1px solid #cfdbee;border-radius:6px;box-shadow:0 18px 48px rgba(18,35,76,.24);color:#101873;font:14px Poppins,Arial,sans-serif;z-index:2147483000}
+.lm-native-calendar:popover-open{display:block}
+.lm-native-calendar::backdrop{background:transparent;pointer-events:none}
+.lm-native-calendar .cal-head{display:flex;align-items:center;justify-content:space-between;height:36px;margin-bottom:10px}.lm-native-calendar .cal-head button{width:32px;height:32px;border:1px solid #d4deed;border-radius:4px;background:#fff;color:#2615c5;cursor:pointer}.lm-native-calendar .cal-week,.lm-native-calendar .cal-days{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center}.lm-native-calendar .cal-week span{font-size:11px;font-weight:600;color:#6976a5;padding:5px 0}.lm-native-calendar .cal-days button{height:34px;border:0;border-radius:4px;background:#fff;color:#24358f;cursor:pointer;font:inherit}.lm-native-calendar .cal-days button:hover{background:#f3efff}.lm-native-calendar .cal-days button.in-range{background:#eee8ff;color:#4f20d8}.lm-native-calendar .cal-days button.selected{background:linear-gradient(90deg,#6c39d7,#7939ed);color:#fff}.lm-native-calendar .cal-foot{display:flex;justify-content:space-between;border-top:1px solid #e6ebf3;margin-top:10px;padding-top:10px}.lm-native-calendar .cal-foot button{height:32px;border:1px solid #d4deed;border-radius:4px;background:#fff;color:#4f20d8;padding:0 12px;cursor:pointer;font:inherit;font-weight:600}.lm-native-calendar .cal-foot .done{background:linear-gradient(90deg,#6c39d7,#7939ed);color:#fff;border-color:transparent}
+#lmHeaderCalendar{position-area:bottom span-left;position-try-fallbacks:flip-block,flip-inline}
+#lmRangeCalendar{position-area:bottom span-left;position-try-fallbacks:flip-block,flip-inline}

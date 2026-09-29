@@ -16,8 +16,8 @@ function calendarMarkup(mode){const y=calView.getFullYear(),m=calView.getMonth()
 function same(a,b){return a&&b&&a.toDateString()===b.toDateString()}
 function showCalendar(anchor,ev,onSelect,mode='single'){ev?.stopPropagation();activeCalendar?.remove();let c=document.createElement('div');c.className='generic-calendar';c.innerHTML=calendarMarkup(mode);document.body.appendChild(c);let r=anchor.getBoundingClientRect();c.style.left=Math.min(r.left,innerWidth-310)+'px';c.style.top=Math.min(r.bottom+6,innerHeight-360)+'px';activeCalendar=c;function refresh(){c.innerHTML=calendarMarkup(mode);bind()}function bind(){ $('[data-cal-prev]',c).onclick=e=>{e.stopPropagation();calView.setMonth(calView.getMonth()-1);refresh()};$('[data-cal-next]',c).onclick=e=>{e.stopPropagation();calView.setMonth(calView.getMonth()+1);refresh()};$$('[data-day]',c).forEach(b=>b.onclick=e=>{e.stopPropagation();let d=new Date(b.dataset.day);if(mode==='range'){rangeStart=d;rangeEnd=new Date(d);rangeEnd.setDate(d.getDate()+6)}else selectedDate=d;onSelect(d);refresh()});$('[data-today]',c).onclick=e=>{e.stopPropagation();let d=new Date();calView=new Date(d.getFullYear(),d.getMonth(),1);if(mode==='single')selectedDate=d;onSelect(d);refresh()};$('[data-cal-done]',c).onclick=e=>{e.stopPropagation();c.remove();activeCalendar=null}}bind();}
 document.addEventListener('click',e=>{if(activeCalendar&&!activeCalendar.contains(e.target)){const old=activeCalendar;activeCalendar=null;queueMicrotask(()=>old?.remove());}});
-const dateChip=$('.date-chip');if(dateChip){dateChip.onclick=e=>showCalendar(dateChip,e,d=>{dateChip.querySelector('b').textContent=d.toLocaleDateString('en-GB',{weekday:'short',day:'2-digit',month:'short',year:'numeric'})})}
-const rangeBtn=$('.range');if(rangeBtn){rangeBtn.onclick=e=>showCalendar(rangeBtn,e,d=>{rangeBtn.innerHTML=icon('calendar')+`${fmt(rangeStart)} - ${fmt(rangeEnd)}`},'range')}
+// Main page date-chip and date-range calendars are owned exclusively by leave-calendar-v9.js.
+// showCalendar remains available only for wizard/action modal date fields.
 let wizardFrom=new Date(2024,7,12), wizardTo=new Date(2024,7,14);
 function longFmt(d){return d.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric',weekday:'short'}).replace(',', '');}
 function syncWizardDates(){
@@ -33,6 +33,10 @@ function bindWizardControls(){
   let t=$('#halfDayToggle');if(t&&!t.dataset.bound){t.dataset.bound='1';t.onclick=()=>{t.classList.toggle('on');t.setAttribute('aria-checked',t.classList.contains('on')?'true':'false')}}
   syncWizardDates();
 }
-const obs=new MutationObserver(bindWizardControls);obs.observe($('#leaveBody'),{childList:true,subtree:true});bindWizardControls();
+// Do not observe #leaveBody here. The old MutationObserver repeatedly called
+// syncWizardDates(), which rewrote text nodes and triggered itself again,
+// causing a render loop/high CPU and making the page appear frozen.
+// The enhanced leave wizard binds its controls after each render.
+bindWizardControls();
 rerender();
 })();
