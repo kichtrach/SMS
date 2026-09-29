@@ -1,0 +1,75 @@
+.btn{border:1px solid var(--border);border-radius:5px;padding:8px 13px;background:#fff;color:var(--navy);cursor:pointer}.btn-primary{background:var(--purple);border-color:var(--purple);color:#fff}.form-control,.select-control{height:38px;border:1px solid var(--border);border-radius:5px;padding:0 10px;background:#fff;color:var(--navy)}.badge{display:inline-flex;align-items:center;padding:3px 7px;border-radius:4px;background:#eef5ff;color:#126bd4;font-size:11px}.table-wrap{overflow:auto}.table{width:100%;border-collapse:collapse}.table th,.table td{padding:10px;border-bottom:1px solid var(--border);text-align:left}.modal{border-radius:5px}.action-menu{border:1px solid var(--border);border-radius:5px;background:#fff}.breadcrumb{color:var(--muted)}
+
+/* Generic form system — shared across all inner modules */
+.form-control,.select-control,
+.main-content input:not([type="checkbox"]):not([type="radio"]):not([type="file"]),
+.main-content select,
+.main-content textarea,
+.student-modal input:not([type="checkbox"]):not([type="radio"]):not([type="file"]),
+.student-modal select,
+.student-modal textarea{
+  width:100%; min-height:42px; border:1px solid #ccd7e8; border-radius:4px;
+  padding:9px 12px; background:#fff; color:var(--navy); outline:none;
+  font:inherit; box-shadow:none; transition:border-color .18s,box-shadow .18s,background .18s;
+}
+.main-content input::placeholder,.main-content textarea::placeholder,
+.student-modal input::placeholder,.student-modal textarea::placeholder{color:#7b89aa;opacity:1}
+.main-content input:focus,.main-content select:focus,.main-content textarea:focus,
+.student-modal input:focus,.student-modal select:focus,.student-modal textarea:focus,
+.form-control:focus,.select-control:focus{border-color:#7547d8;box-shadow:0 0 0 3px rgba(117,71,216,.10)}
+.main-content select,.student-modal select,.select-control{
+  appearance:none;-webkit-appearance:none;-moz-appearance:none;
+  padding-right:38px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23071457' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 12px center;background-size:14px;
+}
+.main-content textarea,.student-modal textarea{min-height:54px;height:auto;resize:vertical}
+.main-content .field label,.student-modal .field label{font-weight:500;margin-bottom:6px;color:var(--navy)}
+.main-content input[type="checkbox"],.student-modal input[type="checkbox"]{width:17px;height:17px;accent-color:#7547d8}
+.main-content input[type="radio"],.student-modal input[type="radio"]{width:18px;height:18px;accent-color:#7547d8}
+.main-content .btn,.student-modal .btn{min-height:40px;border-radius:4px;font-weight:500;padding:9px 15px}
+.main-content .btn-primary,.student-modal .btn-primary{background:linear-gradient(90deg,#6936dd,#7928ff);border-color:#6936dd;color:#fff}
+.main-content .btn-soft,.student-modal .btn-soft{background:#f1f5fb;border-color:#dce4f1;color:var(--navy)}
+.main-content .action-menu,.student-modal .action-menu{box-shadow:0 10px 24px rgba(15,25,75,.12)}
+
+/* Generic themed date control */
+.date-field{position:relative}.date-field input{cursor:pointer;padding-right:42px!important}.date-field>i{position:absolute;right:13px;top:50%;transform:translateY(-50%);width:18px;height:18px;color:#233b7b;pointer-events:none}
+.generic-date-picker{position:fixed;z-index:300;width:286px;padding:12px;background:#fff;border:1px solid #ccd7e8;border-radius:5px;box-shadow:0 14px 35px rgba(15,25,75,.18);display:none;color:#071457;font-size:13px}.generic-date-picker.open{display:block}.date-picker-head{display:grid;grid-template-columns:34px 1fr 34px;align-items:center;margin-bottom:9px}.date-picker-head strong{text-align:center;font-size:13px}.date-picker-head button{width:32px;height:32px;border:1px solid transparent;background:#fff;border-radius:4px;color:#071457;display:grid;place-items:center;cursor:pointer}.date-picker-head button:hover{background:#f1edff;color:#6b36dd}.date-picker-head svg{width:16px}.date-week,.date-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}.date-week span{text-align:center;padding:5px 0;font-size:11px;font-weight:600;color:#6e7da3}.date-day{height:32px;border:0;border-radius:4px;background:#fff;color:#071457;cursor:pointer;font:inherit}.date-day:hover{background:#eee8ff;color:#6537dc}.date-day.muted{color:#a6b0c7}.date-picker-foot{display:flex;justify-content:space-between;border-top:1px solid #e1e7f0;margin-top:8px;padding-top:9px}.date-picker-foot button{border:0;background:none;color:#6537dc;font-weight:600;cursor:pointer}
+
+
+/* Final generic-control hardening: keep icons/arrows aligned after Lucide replaces <i> with <svg>. */
+.main-content select,.student-modal select,.select-control{
+  -webkit-appearance:none!important;appearance:none!important;
+  background-color:#fff!important;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23071457' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")!important;
+  background-repeat:no-repeat!important;background-position:right 12px center!important;background-size:15px!important;
+  padding-right:40px!important;
+}
+.date-field{position:relative!important;display:block}.date-field .js-date-input{padding-right:44px!important}.date-field>svg,.date-field>[data-lucide]{position:absolute!important;right:13px!important;top:50%!important;transform:translateY(-50%)!important;width:18px!important;height:18px!important;color:#233b7b!important;pointer-events:none!important;display:block!important}
+.search-box{position:relative!important}.search-box>svg,.search-box>[data-lucide="search"]{position:absolute!important;left:12px!important;top:50%!important;transform:translateY(-50%)!important;width:18px!important;height:18px!important;color:#53658f!important;z-index:2!important;pointer-events:none!important}.search-box input{padding-left:40px!important}
+
+/* Generic component consistency patch */
+.main-content .btn,.student-modal .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;white-space:nowrap;line-height:1.2;box-sizing:border-box}
+.main-content .btn svg,.student-modal .btn svg{width:17px;height:17px;flex:0 0 17px}
+.main-content .btn-danger{background:#fff1f2;border-color:#ffc9cf;color:#cf2433}
+.main-content input[type="date"]{appearance:none;-webkit-appearance:none;padding-right:42px;color:var(--navy)}
+.main-content input[type="date"]::-webkit-calendar-picker-indicator{opacity:0;position:absolute;right:0;width:42px;height:100%;cursor:pointer}
+
+/* Generic leading-icon field component used by admission and reusable forms */
+.control-icon{position:relative;width:100%}
+.control-icon>svg,.control-icon>[data-lucide]{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:17px;height:17px;color:#7185bd;z-index:2;pointer-events:none;stroke-width:1.9}
+.control-icon>.form-control,.control-icon>.select-control,.control-icon>input,.control-icon>select{padding-left:40px!important}
+.control-icon>select,.control-icon>.select-control{background-position:right 12px center!important;padding-right:40px!important}
+.date-field>svg{z-index:2}
+
+/* Generic file-upload component */
+.file-upload-control{position:relative;display:flex;align-items:center;justify-content:center;gap:10px;min-height:58px;width:100%;border:1px dashed #b9c9e6;border-radius:4px;background:#fbfcff;color:#405486;cursor:pointer;overflow:hidden;transition:.18s ease}
+.file-upload-control:hover,.file-upload-control:focus-within{border-color:#7547d8;background:#faf8ff;box-shadow:0 0 0 3px rgba(117,71,216,.08)}
+.file-upload-control>svg{width:21px;height:21px;color:#405aa3;flex:0 0 21px}
+.file-upload-control input[type=file]{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
+.file-upload-label{display:flex;align-items:center;gap:5px;font-size:13px;color:#53658f;pointer-events:none}
+.file-upload-label strong{color:#4521c7;font-weight:600;text-decoration:underline}
+.file-upload-name{max-width:145px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.upload-box{background:#fff;border:1px solid #d5dfed!important;border-radius:5px!important;padding:10px!important}
+.upload-box>small{display:block;margin-top:7px;font-size:12px;color:#687ba8!important}
+.generic-table-card{border:1px solid #d5dfed;border-radius:5px;overflow:hidden;background:#fff}.generic-table-title{padding:10px 16px;background:#f4f7fc;border-bottom:1px solid #e1e7f0;font-weight:600;color:#071457;display:flex;align-items:center;gap:9px}.generic-table-title svg{width:19px;color:#4c24dd}.generic-table-body{padding:10px 14px}.generic-table{width:100%;border-collapse:collapse}.generic-table th{background:#f8faff;color:#071457;font-weight:600}.generic-table th,.generic-table td{padding:9px 10px;border-bottom:1px solid #dfe6f1;text-align:left;font-size:12px}.generic-table tr:last-child td{border-bottom:0}.table-action-btn{border:0;background:transparent;padding:4px;color:#132c78;cursor:pointer}.table-action-btn.danger{color:#e82d68}.table-action-btn svg{width:17px;height:17px}

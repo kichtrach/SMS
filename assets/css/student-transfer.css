@@ -1,0 +1,133 @@
+.transfer-page{padding:18px 22px 22px;font-size:13px;color:#102b72}.transfer-page *{box-sizing:border-box}.tr-head{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;margin-bottom:16px}.crumb{display:flex;gap:7px;align-items:center;margin-bottom:8px}.crumb svg{width:13px}.tr-head h1{font-size:27px;line-height:1.1;margin:0 0 5px;color:#0c238d}.tr-head p{font-size:14px;margin:0}.year-box{width:230px;border:1px solid #cbd9f5;border-radius:5px;background:#fff;padding:8px 12px}.year-box label{display:block;font-size:11px;margin-bottom:7px}.year-box div{display:flex;gap:10px;align-items:center;font-weight:600}.year-box svg{width:16px}.year-box svg:last-child{margin-left:auto}.tr-card{border:1px solid #d9e2f4;border-radius:6px;background:#fff}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:15px;margin-bottom:12px}.stat{height:84px;border:1px solid #e0e6f3;border-radius:5px;display:flex;align-items:center;gap:18px;padding:14px;background:#fbfaff}.stat:nth-child(2){background:#f5fcf9}.stat:nth-child(3){background:#fffaf4}.stat:nth-child(4){background:#fff7f9}.ico{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:#eee8ff;color:#5427ef}.ico svg{width:25px}.stat:nth-child(2) .ico{background:#dff8e9;color:#0a9945}.stat:nth-child(3) .ico{background:#fff0d7;color:#f18b00}.stat:nth-child(4) .ico{background:#ffe2e8;color:#ef2351}.stat label{display:block;font-size:12px;margin-bottom:4px}.stat b{font-size:25px;color:#3817e6}.stat:nth-child(2) b{color:#07933d}.stat:nth-child(3) b{color:#ee8400}.stat:nth-child(4) b{color:#ed234f}.filters{display:grid;grid-template-columns:1.1fr .9fr .9fr .9fr 1.35fr 100px 82px;gap:14px;padding:14px;margin-bottom:12px;align-items:end}.field label{font-weight:600;font-size:11px;display:block;margin-bottom:5px}.field input,.field select{width:100%;height:38px;border:1px solid #cbd9f5;border-radius:5px;background:#fff;color:#102b72;padding:0 11px;font:inherit;outline:0}.primary,.outline{height:40px;border-radius:5px;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:7px}.primary{border:0;color:#fff;background:linear-gradient(90deg,#6c39d7,#7939ed);padding:0 18px}.outline{border:1px solid #6c39d7;color:#3217d7;background:#fff;padding:0 16px}.primary svg,.outline svg{width:16px}.list-head{display:flex;align-items:center;padding:11px 14px;border-bottom:1px solid #e4e9f4;background:#fbfcff}.list-head .ico{width:38px;height:38px;margin-right:10px}.list-head .ico svg{width:20px}.list-head h2{font-size:17px;margin:0 0 2px}.list-head p{margin:0}.list-actions{margin-left:auto;display:flex;gap:10px}.table-wrap{overflow:auto}.transfer-table{width:100%;border-collapse:collapse}.transfer-table th{background:#f4f6fb;text-align:left;font-size:11px;padding:9px 10px;white-space:nowrap}.transfer-table td{border-bottom:1px solid #e5eaf5;padding:7px 10px;white-space:nowrap}.student{display:flex;align-items:center;gap:9px;font-weight:600}.avatar{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#e7ebf5;font-size:10px}.badge{display:inline-flex;align-items:center;gap:5px;border-radius:4px;padding:4px 9px;font-size:10px}.badge svg{width:11px}.approved{background:#dcf6e5;color:#087c3e}.pending{background:#fff0d8;color:#c26b00}.rejected{background:#ffe2e7;color:#df173a}.type{background:#e7f3ff;color:#1672c8}.type.ext{background:#f0e6ff;color:#7b35d1}.dots{height:30px;width:30px;border:1px solid #d4dff4;border-radius:5px;background:#fff;color:#3119d8;display:grid;place-items:center;cursor:pointer}.dots svg{width:15px}.pager{display:flex;justify-content:space-between;align-items:center;padding:12px}.pager .right{display:flex;align-items:center;gap:7px}.pager select,.pager button{height:34px;min-width:34px;border:1px solid #d0dcf4;border-radius:5px;background:#fff;color:#15319d}.pager button.active{background:linear-gradient(90deg,#6c39d7,#7939ed);color:#fff}.action-menu{position:fixed;z-index:20000;width:175px;background:#fff;border:1px solid #d9e2f4;border-radius:6px;box-shadow:0 12px 30px #15235024;padding:5px}.action-menu button{width:100%;height:34px;border:0;background:#fff;color:#102b72;text-align:left;padding:0 9px;border-radius:4px;cursor:pointer}.action-menu button:hover{background:#f5f2ff}.modal{position:fixed;inset:0;background:#10203d88;z-index:15000;display:grid;place-items:center;padding:18px}.dialog{width:min(1120px,calc(100vw - 50px));max-height:calc(100vh - 44px);overflow:auto;background:#fff;border-radius:8px;box-shadow:0 18px 60px #08152d42;padding:18px}.dialog-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px}.dialog-head h2{font-size:25px;margin:0 0 4px;color:#10239b}.dialog-head p{margin:0;font-size:14px}.x{border:0;background:transparent;color:#3444a5;cursor:pointer}.x svg{width:22px}.stepper{display:grid;grid-template-columns:repeat(4,1fr);position:relative;margin:8px 10px 18px}.stepper:before{content:"";height:2px;background:#bdcaed;position:absolute;left:11%;right:11%;top:18px}.step{z-index:1;text-align:center}.step .num{width:38px;height:38px;border-radius:50%;border:1px solid #adc2f1;background:#fff;display:grid;place-items:center;margin:0 auto 8px}.step.active .num,.step.done .num{background:linear-gradient(90deg,#6c39d7,#7939ed);border-color:#7939ed;color:#fff}.step.active b{font-weight:700}.panel{border:1px solid #d9e2f4;border-radius:6px;overflow:hidden;margin-bottom:12px}.panel-head{min-height:54px;background:#fbfcff;border-bottom:1px solid #e5eaf5;padding:10px 14px;display:flex;align-items:center;gap:10px}.panel-head .ico{width:38px;height:38px}.panel-head h3{margin:0 0 2px;font-size:16px}.panel-head p{margin:0}.panel-body{padding:14px}.form-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.form-grid.two{grid-template-columns:1fr 1.4fr}.student-preview{margin-top:12px;background:#f8faff;border:1px solid #e0e7f4;border-radius:5px;padding:12px;display:flex;gap:15px;align-items:center}.student-preview .avatar{width:48px;height:48px}.transfer-types{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.choice{border:1px solid #d7e0f3;border-radius:5px;padding:12px;display:flex;gap:10px;cursor:pointer}.choice.active{border-color:#7651ee;background:#fbfaff}.choice input{accent-color:#6d35e5}.dialog-footer{display:flex;justify-content:space-between;align-items:center;margin-top:12px}.dialog-footer .right{display:flex;gap:10px}.split{display:grid;grid-template-columns:1fr 1.4fr;gap:14px}.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.readonly{background:#f1f4f8!important;color:#8a94aa!important}.textarea{width:100%;min-height:74px;border:1px solid #cbd9f5;border-radius:5px;padding:10px;font:inherit;color:#102b72}.upload{border:1px dashed #b9c9ef;border-radius:5px;padding:16px;text-align:center}.file-row{display:flex;justify-content:space-between;border:1px solid #dce4f3;padding:8px 10px;margin-top:6px;border-radius:4px}.toggle-row{display:flex;gap:12px;margin-bottom:10px}.toggle{appearance:none;width:38px;height:20px;background:#bdc7da;border-radius:20px;position:relative;flex:0 0 auto}.toggle:before{content:"";position:absolute;width:16px;height:16px;background:#fff;border-radius:50%;left:2px;top:2px}.toggle:checked{background:#6c39e8}.toggle:checked:before{left:20px}.review-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.review-list{display:grid;grid-template-columns:150px 15px 1fr;gap:7px}.success{width:min(490px,94vw);background:#fff;border-radius:10px;padding:22px;text-align:center}.success-icon{width:110px;height:110px;margin:0 auto 12px;border-radius:50%;background:#e4f8f0;display:grid;place-items:center;color:#06a75d}.success-icon svg{width:55px;height:55px}.success h2{color:#101be0;font-size:22px}.success-details{text-align:left;background:#f8fbff;border:1px solid #dbe5f4;border-radius:6px;padding:14px 18px;margin:15px 0}.success-details .review-list{grid-template-columns:140px 15px 1fr}.success-actions{display:grid;grid-template-columns:1fr 1fr;gap:12px}.success-actions button{width:100%}@media(max-width:1100px){.stats{grid-template-columns:1fr 1fr}.filters{grid-template-columns:repeat(3,1fr)}.form-grid{grid-template-columns:1fr 1fr}.split,.review-grid{grid-template-columns:1fr}}@media(max-width:760px){.transfer-page{padding:14px 12px}.tr-head{flex-direction:column}.year-box{width:100%}.stats,.filters,.form-grid,.transfer-types{grid-template-columns:1fr}.dialog{width:calc(100vw - 20px);padding:12px}.step{font-size:10px}.pager{flex-direction:column;align-items:flex-start;gap:10px}}
+
+/* Student Transfer — generic Nexora UI normalization */
+.transfer-page{font-size:13px;color:var(--navy,#071457)}
+.transfer-page p,.transfer-page small{color:var(--muted,#60709b)}
+.tr-card,.panel,.year-box{border-color:var(--border,#dce4f1);border-radius:4px;box-shadow:none}
+.stats{background:#fff}
+.stat,.stat:nth-child(2),.stat:nth-child(3),.stat:nth-child(4){background:#fff;border-color:var(--border,#dce4f1);border-radius:4px}
+.stat .ico,.stat:nth-child(2) .ico,.stat:nth-child(3) .ico,.stat:nth-child(4) .ico,.list-head .ico,.panel-head .ico{background:#f2edff;color:#6c39d7}
+.stat b,.stat:nth-child(2) b,.stat:nth-child(3) b,.stat:nth-child(4) b{color:#071457;font-size:23px}
+.primary{background:linear-gradient(90deg,#6c39d7 0%,#7939ed 100%);border:1px solid #6c39d7;border-radius:4px}
+.outline{border-color:#cbd6e8;color:#071457;border-radius:4px;background:#fff}
+.outline:hover{border-color:#6c39d7;color:#6c39d7;background:#faf8ff}
+.field input,.field select,.textarea{height:42px;border:1px solid #ccd7e8;border-radius:4px;color:#071457;background:#fff;font-size:13px}
+.field select{appearance:none;-webkit-appearance:none;padding-right:38px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 24 24' fill='none' stroke='%23071457' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center}
+.control-icon{position:relative}.control-icon>svg,.control-icon>[data-lucide]{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:17px;height:17px;color:#7185bd;z-index:2;pointer-events:none}.control-icon>input,.control-icon>select,.control-icon>textarea{padding-left:39px!important}.control-icon>select{padding-right:39px!important}.control-icon>.textarea{padding-top:10px}
+.transfer-table th{background:#f5f7fb;color:#071457;font-size:12px}.transfer-table td{color:#23366f;font-size:12px}.avatar{background:#eef1f7;color:#405486}.type,.type.ext{background:#f1edff;color:#6233cf}.approved{background:#eaf7f0;color:#087c3e}.pending{background:#fff6e8;color:#a86200}.rejected{background:#fff0f2;color:#c82946}
+.badge{border-radius:3px}.dots{border-radius:4px;color:#4e2acb}.list-head,.panel-head{background:#fafbfe}.list-head h2,.panel-head h3,.dialog-head h2{color:#071457}.dialog{border-radius:5px}.choice{border-radius:4px;background:#fff}.choice.active{border-color:#6c39d7;background:#faf8ff}.upload{border-radius:4px;background:#fbfcff}.file-row{border-radius:4px}.toggle:checked{background:#6c39d7}.success h2{color:#071457}.success-icon{background:#f1edff;color:#6c39d7}
+
+/* Student Transfer UI alignment fixes */
+.transfer-table .row-check{appearance:auto;-webkit-appearance:checkbox;width:14px;height:14px;margin:0;vertical-align:middle;accent-color:#6c39d7;cursor:default}
+.transfer-table .row-check:disabled{opacity:1}
+.filters .primary svg,.filters .outline svg{width:16px!important;height:16px!important;min-width:16px;stroke-width:2;display:block}
+.filters .primary,.filters .outline{white-space:nowrap;min-width:max-content}
+.pager{gap:16px;flex-wrap:nowrap}
+.pager .right{margin-left:auto;display:flex;align-items:center;justify-content:flex-end;gap:8px;flex-wrap:nowrap;white-space:nowrap}
+.pager #per{width:84px;min-width:84px;padding:0 28px 0 10px}
+.pager #pages{display:flex;align-items:center;gap:6px;flex-wrap:nowrap}
+.pager #pages button,.pager #prev,.pager #next{flex:0 0 34px;width:34px;min-width:34px;padding:0;display:inline-flex;align-items:center;justify-content:center}
+.transfer-table th:first-child,.transfer-table td:first-child{width:34px;text-align:center;padding-left:10px;padding-right:6px}
+.transfer-table th:nth-child(2),.transfer-table td:nth-child(2){width:42px}
+.dots{cursor:default}
+.dots:hover{background:#fff}
+@media(max-width:900px){.pager{align-items:flex-start;flex-direction:column}.pager .right{margin-left:0;width:100%;justify-content:flex-start;overflow-x:auto;padding-bottom:2px}}
+
+/* Student Transfer stability/layout fixes */
+#pages{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.pager .right{flex-wrap:nowrap;white-space:nowrap}
+.dialog{width:min(1000px,calc(100vw - 48px));margin:auto;overscroll-behavior:contain}
+.split{grid-template-columns:minmax(0,.9fr) minmax(0,1.25fr);gap:20px}
+.split>div{min-width:0}
+.split .form-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.split .field{min-width:0}
+.split .field input,.split .field select{min-width:0}
+.control-icon{position:relative;min-width:0}
+.control-icon>svg{position:absolute;left:11px;top:50%;transform:translateY(-50%);width:16px;height:16px;pointer-events:none;z-index:1;color:#7386bb}
+.control-icon>input,.control-icon>select{padding-left:36px}
+.control-icon>textarea{padding-left:36px}
+@media(max-width:900px){.dialog{width:calc(100vw - 24px)}.split{grid-template-columns:1fr}.split .form-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.split .form-grid{grid-template-columns:1fr}.pager .right{flex-wrap:wrap;white-space:normal}}
+
+/* Interaction repair: keep controls above decorative layers and visibly clickable */
+.transfer-page .tr-card,.transfer-page .filters,.transfer-page .list-head,.transfer-page .table-wrap,.transfer-page .pager{position:relative;z-index:1}
+.transfer-page button,.transfer-page select,.transfer-page input,.transfer-page .dots{pointer-events:auto;position:relative;z-index:2}
+.transfer-table .row-check{cursor:pointer!important}
+.dots{cursor:pointer!important}
+.dots:hover{background:#f7f4ff!important;border-color:#bcaaf2}
+.pager button:not(:disabled),.list-actions button,.filters button{cursor:pointer}
+.action-menu{pointer-events:auto}
+.action-menu button{pointer-events:auto}
+
+.action-menu button{display:flex;align-items:center;gap:9px}.action-menu button svg{width:15px;height:15px}
+.action-popup-overlay{position:fixed;inset:0;background:#10203d88;z-index:30000;display:grid;place-items:center;padding:18px}
+.action-popup{width:min(650px,calc(100vw - 32px));max-height:calc(100vh - 36px);overflow:auto;background:#fff;border-radius:8px;box-shadow:0 18px 60px #08152d42}
+.action-popup-head{display:flex;justify-content:space-between;align-items:flex-start;padding:18px 20px;border-bottom:1px solid #e2e8f4}.action-popup-head h2{font-size:20px;color:#10239b;margin:0 0 4px}.action-popup-head p{margin:0;color:#61709b}.action-popup-body{padding:18px 20px}.action-popup-footer{padding:14px 20px;border-top:1px solid #e2e8f4;display:flex;justify-content:flex-end;gap:10px;background:#fbfcff}
+.action-student{display:flex;align-items:center;gap:12px;background:#f8faff;border:1px solid #e0e7f4;border-radius:6px;padding:12px;margin-bottom:16px}.action-student .avatar{width:42px;height:42px}.action-student div{display:flex;flex-direction:column;gap:3px}.action-student small{color:#7180a7}.action-student .badge{margin-left:auto}.action-detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.action-detail-grid>div{border:1px solid #e0e7f4;border-radius:5px;padding:11px;background:#fff}.action-detail-grid span{display:block;color:#7180a7;font-size:11px;margin-bottom:4px}.action-detail-grid .full,.action-form-grid .full{grid-column:1/-1}
+.action-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.action-form-grid .field input,.action-form-grid .field select{height:40px}.status-student{display:flex;flex-direction:column;gap:4px;background:#f8faff;border:1px solid #e0e7f4;padding:12px;border-radius:5px;margin-bottom:15px}.status-student span{color:#7180a7}.action-popup-body>.field{margin-bottom:14px}.download-box{display:flex;align-items:center;gap:14px;border:1px solid #dce4f3;background:#f8faff;padding:15px;border-radius:6px}.download-box>svg{width:30px;height:30px;color:#6c39d7}.download-box div{display:flex;flex-direction:column;gap:4px}.download-box span,.download-note{color:#7180a7}.download-note{margin:12px 0 0}
+.transfer-toast{position:fixed;right:24px;bottom:24px;z-index:40000;background:#fff;border:1px solid #d9e2f4;border-radius:6px;box-shadow:0 12px 30px #15235024;padding:12px 16px;display:flex;align-items:center;gap:9px;color:#087c3e;transform:translateY(20px);opacity:0;transition:.2s}.transfer-toast.show{transform:none;opacity:1}.transfer-toast svg{width:18px}
+@media(max-width:600px){.action-detail-grid,.action-form-grid{grid-template-columns:1fr}.action-detail-grid .full,.action-form-grid .full{grid-column:auto}.action-popup-footer{flex-wrap:wrap}.action-popup-footer button{flex:1}}
+
+/* === Student Transfer: final Generic Nexora theme + typography === */
+.transfer-page{font-size:15px!important;color:var(--navy)!important;padding:14px 20px 24px!important}
+.transfer-page p,.transfer-page small{font-size:13px;line-height:1.5;color:var(--muted)!important}
+.transfer-page .crumb{font-size:14px;color:var(--muted)}
+.transfer-page .tr-head h1{font-size:30px!important;font-weight:700;color:var(--navy)!important;letter-spacing:-.4px}
+.transfer-page .tr-head p{font-size:14px!important}
+.transfer-page .year-box,.transfer-page .tr-card,.transfer-page .panel{border:1px solid var(--border)!important;border-radius:var(--radius)!important;background:#fff!important;box-shadow:0 1px 2px rgba(20,35,90,.02)!important}
+.transfer-page .year-box{padding:10px 13px}
+.transfer-page .year-box label,.transfer-page .field label{font-size:13px!important;font-weight:600;color:var(--navy)!important;margin-bottom:7px}
+.transfer-page .year-box div{font-size:14px}
+.transfer-page .stats{gap:14px;padding:14px;background:transparent!important}
+.transfer-page .stat,.transfer-page .stat:nth-child(n){height:92px;padding:15px;background:#fff!important;border:1px solid var(--border)!important;border-radius:var(--radius)!important}
+.transfer-page .stat .ico,.transfer-page .stat:nth-child(n) .ico{width:44px;height:44px;background:#f1edff!important;color:var(--purple)!important;border-radius:50%}
+.transfer-page .stat label{font-size:13px!important;color:var(--muted)}
+.transfer-page .stat b,.transfer-page .stat:nth-child(n) b{font-size:24px!important;color:var(--navy)!important}
+.transfer-page .filters{padding:16px;gap:12px}
+.transfer-page .field input,.transfer-page .field select,.transfer-page .textarea{min-height:42px;height:42px;font-size:14px!important;border:1px solid #ccd7e8!important;border-radius:4px!important;color:var(--navy)!important;background-color:#fff!important;box-shadow:none}
+.transfer-page .textarea{height:auto;min-height:82px;line-height:1.5}
+.transfer-page .field input:focus,.transfer-page .field select:focus,.transfer-page .textarea:focus{border-color:var(--purple)!important;box-shadow:0 0 0 3px rgba(117,71,216,.10)!important;outline:0}
+.transfer-page .primary,.transfer-page .outline{min-height:42px;height:42px;border-radius:4px!important;font-size:14px!important;font-weight:600;padding:0 16px}
+.transfer-page .primary{background:linear-gradient(90deg,#6c39d7 0%,#7939ed 100%)!important;border:1px solid #6c39d7!important;color:#fff!important}
+.transfer-page .outline{background:#fff!important;border:1px solid #ccd7e8!important;color:var(--navy)!important}
+.transfer-page .outline:hover{border-color:var(--purple)!important;background:#faf8ff!important;color:#5f31d2!important}
+.transfer-page .list-head{padding:13px 15px;background:#fff!important}
+.transfer-page .list-head h2{font-size:18px!important;color:var(--navy);font-weight:700}
+.transfer-page .list-head p{font-size:13px!important}
+.transfer-page .list-head .ico,.transfer-page .panel-head .ico{background:#f1edff!important;color:var(--purple)!important}
+.transfer-page .transfer-table{font-size:14px}
+.transfer-page .transfer-table th{font-size:13px!important;font-weight:700;color:var(--navy)!important;background:#f4f7fc!important;padding:11px 10px}
+.transfer-page .transfer-table td{font-size:13px!important;color:var(--navy)!important;padding:9px 10px}
+.transfer-page .student{font-size:13px;font-weight:600}.transfer-page .avatar{font-size:11px;font-weight:600;color:#405486;background:#eef1f7}
+.transfer-page .badge{font-size:11px!important;font-weight:500;padding:4px 8px;border-radius:4px!important}
+.transfer-page .pager{font-size:13px;padding:13px 12px}.transfer-page .pager select,.transfer-page .pager button{font-size:13px;height:36px;border-color:#ccd7e8;border-radius:4px;color:var(--navy)}
+.transfer-page .pager button.active{background:linear-gradient(90deg,#6c39d7,#7939ed)!important;border-color:#6c39d7!important;color:#fff!important}
+.transfer-page .dots{width:32px;height:32px;border-color:#ccd7e8;color:#5f31d2;border-radius:4px!important}
+.transfer-page .action-menu{width:190px;border:1px solid var(--border);border-radius:5px!important;box-shadow:0 10px 24px rgba(15,25,75,.12)}
+.transfer-page .action-menu button{height:38px;font-size:13px;color:var(--navy);border-radius:4px}
+
+/* Wizard and action popups use the same generic component language */
+.modal .dialog,.action-popup{font-size:14px;color:var(--navy);border:1px solid var(--border);border-radius:5px!important;background:#fff}
+.dialog-head h2,.action-popup-head h2{font-size:22px!important;color:var(--navy)!important;font-weight:700}
+.dialog-head p,.action-popup-head p{font-size:13px!important;color:var(--muted)!important}
+.stepper{font-size:13px}.step .num{font-size:13px;border-color:#b8c7e5}.step b{font-size:13px;color:var(--navy)}
+.panel{border-radius:5px!important}.panel-head{min-height:58px;padding:11px 14px;background:#f8faff!important}.panel-head h3{font-size:16px!important;color:var(--navy)!important}.panel-head p{font-size:13px!important}.panel-body{padding:16px}
+.choice{min-height:48px;align-items:center;font-size:13px;border-color:#ccd7e8!important}.choice.active{border-color:var(--purple)!important;background:#faf8ff!important}
+.review-list{font-size:13px;line-height:1.45}.upload,.file-row{font-size:13px;border-color:#ccd7e8}.dialog-footer{padding-top:4px}
+.action-popup-head{padding:16px 18px;background:#fff}.action-popup-body{padding:18px}.action-popup-footer{padding:13px 18px;background:#f8faff}
+.action-detail-grid>div,.action-student,.status-student,.download-box{border-color:var(--border)!important;border-radius:4px!important;background:#f8faff!important}.action-detail-grid span{font-size:12px!important;color:var(--muted)}
+.action-popup .field label{font-size:13px!important}.action-popup .field input,.action-popup .field select,.action-popup .textarea{font-size:14px!important;border-radius:4px!important;border-color:#ccd7e8!important}
+.transfer-toast{font-size:13px;border-radius:5px;border-color:var(--border)}
+@media(max-width:760px){.transfer-page{font-size:14px!important;padding:12px!important}.transfer-page .tr-head h1{font-size:25px!important}.transfer-page .transfer-table th,.transfer-page .transfer-table td{font-size:12px!important}}
+
+/* Student Transfer filter spacing fix */
+.transfer-page .filters{
+  padding:20px!important;
+  column-gap:14px!important;
+  row-gap:16px!important;
+}
+.transfer-page .filters .field{min-width:0}
+.transfer-page .filters .field input,
+.transfer-page .filters .field select{padding-left:14px!important;padding-right:14px!important}
+@media(max-width:1100px){.transfer-page .filters{padding:18px!important}}
+@media(max-width:760px){.transfer-page .filters{padding:16px!important;row-gap:12px!important}}

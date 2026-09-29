@@ -1,0 +1,121 @@
+.sidebar{position:fixed;z-index:30;inset:0 auto 0 0;width:var(--sidebar);background:linear-gradient(180deg,#23265f,#252864 55%,#22255b);color:#fff;transition:.25s;overflow:hidden}.brand{height:70px;background:#fff;color:var(--navy);display:flex;flex-direction:column;justify-content:center;align-items:center;border-right:1px solid #eef1f6}.brand-logo{display:block;width:194px;max-width:calc(100% - 28px);height:52px;object-fit:contain}.sidebar-nav{padding:20px 11px}.nav-item{height:46px;margin-bottom:4px;padding:0 12px;display:flex;align-items:center;gap:15px;color:#fff;text-decoration:none;border-radius:5px;position:relative;white-space:nowrap}.nav-item>svg:first-child{width:22px;min-width:22px}.nav-item span{font-size:13px}.nav-chevron{width:16px;margin-left:auto}.nav-item:hover{background:rgba(255,255,255,.08)}.nav-item.active{background:linear-gradient(90deg,#6d3ed0,#8c50e5)}.sidebar-overlay{display:none}.sidebar-collapsed .sidebar{width:var(--sidebar-collapsed)}.sidebar-collapsed .nav-item span,.sidebar-collapsed .nav-chevron{display:none}.sidebar-collapsed .nav-item{justify-content:center;padding:0}.sidebar-collapsed .brand-logo{width:54px;max-width:54px;height:46px;object-fit:cover;object-position:left center}
+
+
+/* Reusable Students sub-navigation */
+.nav-group{margin-bottom:4px}.nav-group>.nav-item{margin-bottom:0}.nav-group.open>.nav-item,.nav-group>.nav-item.active{background:linear-gradient(90deg,#6d3ed0,#8c50e5)}.nav-group.open .nav-chevron{transform:rotate(90deg)}.nav-chevron{transition:transform .18s}.subnav{display:none;margin:5px 0 8px 32px;padding-left:12px;border-left:2px solid rgba(185,199,235,.28)}.nav-group.open .subnav{display:block}.subnav-item{min-height:30px;display:flex;align-items:center;gap:10px;padding:5px 9px;color:#fff;text-decoration:none;border-radius:4px;font-size:12px;white-space:nowrap}.subnav-item:before{content:"";width:6px;height:6px;border-radius:50%;background:#fff;opacity:.95;flex:0 0 auto}.subnav-item:hover,.subnav-item.active{background:rgba(255,255,255,.09)}.subnav-item.active{font-weight:600}.sidebar-collapsed .subnav{display:none!important}.sidebar-collapsed .nav-group>.nav-item{justify-content:center;padding:0}
+
+/* Students submenu reference alignment */
+.nav-group[data-group="students"] .subnav{margin:5px 0 8px 43px;padding-left:0;border-left:2px solid rgba(126,151,211,.35)}
+.nav-group[data-group="students"] .subnav-item{position:relative;min-height:30px;padding:5px 12px 5px 20px;border-radius:4px;font-size:13px;font-weight:400;background:transparent}
+.nav-group[data-group="students"] .subnav-item:before{display:none}
+.nav-group[data-group="students"] .subnav-item:first-child:before{display:block;content:"";position:absolute;left:-6px;top:50%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:#fff;opacity:1}
+.nav-group[data-group="students"] .subnav-item.active{background:rgba(255,255,255,.10);font-weight:500}
+.nav-group[data-group="students"]>.nav-item{height:46px}
+.nav-group[data-group="students"].open>.nav-item{background:linear-gradient(90deg,#6535cf,#7d3ee9)}
+.nav-group[data-group="students"].open>.nav-item .nav-chevron{transform:rotate(90deg)}
+
+/* Reference-accurate desktop sidebar */
+@media (min-width:768px){
+  :root{--sidebar:250px}
+  .sidebar{width:250px;background:linear-gradient(180deg,#11194b 0%,#17245a 52%,#10194a 100%)}
+  .brand{height:72px}
+  .brand-logo{width:205px;max-width:calc(100% - 28px);height:54px}
+  .sidebar-nav{padding:20px 11px 22px}
+  .nav-item{height:46px;margin:0 0 4px;padding:0 13px;gap:14px;border-radius:5px}
+  .nav-item>svg:first-child{width:21px;height:21px;min-width:21px;stroke-width:2.3}
+  .nav-item span{font-size:14px;font-weight:400;line-height:1}
+  .nav-chevron{width:15px;height:15px;stroke-width:2;margin-left:auto}
+  .nav-group[data-group="students"]>.nav-item{height:46px}
+  .nav-group[data-group="students"].open>.nav-item{background:linear-gradient(90deg,#6c39d7 0%,#7939ed 100%)}
+  .nav-group[data-group="students"] .subnav{margin:5px 0 8px 32px;padding:0 0 0 12px;border-left:2px solid rgba(137,160,215,.38)}
+  .nav-group[data-group="students"] .subnav-item{min-height:30px;padding:5px 10px 5px 10px;font-size:13px;line-height:20px;border-radius:4px;gap:10px}
+  .nav-group[data-group="students"] .subnav-item:first-child{padding-left:24px}
+  .nav-group[data-group="students"] .subnav-item:first-child:before{left:9px;transform:translateY(-50%);width:6px;height:6px}
+  .nav-group[data-group="students"] .subnav-item.active{background:rgba(255,255,255,.10);font-weight:400}
+}
+
+/* Students sub-navigation final reference positioning */
+@media (min-width:768px){
+  .nav-group[data-group="students"] .subnav{
+    margin:6px 0 9px 32px;
+    padding:0;
+    border-left:2px solid rgba(137,160,215,.38);
+  }
+  .nav-group[data-group="students"] .subnav-item{
+    position:relative;
+    width:calc(100% + 18px);
+    min-height:30px;
+    margin-left:-18px;
+    padding:5px 10px 5px 38px;
+    gap:0;
+    font-size:13px;
+    line-height:20px;
+    border-radius:4px;
+  }
+  .nav-group[data-group="students"] .subnav-item:first-child{padding-left:38px}
+  .nav-group[data-group="students"] .subnav-item:first-child:before{
+    display:block;
+    left:18px;
+    top:50%;
+    transform:translate(-50%,-50%);
+    width:6px;
+    height:6px;
+  }
+}
+
+/* All Students active indicator */
+.nav-group[data-group="students"] .subnav-item:first-child:before{display:block!important;background:#fff!important;opacity:1!important;}
+.nav-group[data-group="students"] .subnav-item:first-child.active:before{box-shadow:0 0 0 2px rgba(255,255,255,.12);}
+
+/* Active Students sub-nav indicator: white dot follows the active menu */
+.nav-group[data-group="students"] .subnav-item:before{
+  display:none!important;
+}
+.nav-group[data-group="students"] .subnav-item.active:before{
+  content:"";
+  display:block!important;
+  position:absolute;
+  left:18px;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:#fff!important;
+  opacity:1!important;
+  box-shadow:none;
+}
+.nav-group[data-group="students"] .subnav-item:first-child:not(.active):before{
+  display:none!important;
+}
+
+/* Students submenu bullet icons — match Class & Section Assignment reference */
+.nav-group[data-group="students"] .subnav-item:before{
+  content:"" !important;
+  display:block !important;
+  position:absolute;
+  left:18px;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:#fff !important;
+  opacity:.95 !important;
+  box-shadow:none;
+}
+.nav-group[data-group="students"] .subnav-item.active:before{
+  background:#fff !important;
+  opacity:1 !important;
+}
+
+/* Staff submenu: use the exact same geometry and visual language as Students submenu */
+@media (min-width:768px){
+  .nav-group[data-group="staff"]>.nav-item{height:46px}
+  .nav-group[data-group="staff"].open>.nav-item{background:linear-gradient(90deg,#6c39d7 0%,#7939ed 100%)}
+  .nav-group[data-group="staff"] .subnav{margin:6px 0 9px 32px;padding:0;border-left:2px solid rgba(137,160,215,.38)}
+  .nav-group[data-group="staff"] .subnav-item{position:relative;width:calc(100% + 18px);min-height:30px;margin-left:-18px;padding:5px 10px 5px 38px;gap:0;font-size:13px;font-weight:400;line-height:20px;border-radius:4px;background:transparent}
+  .nav-group[data-group="staff"] .subnav-item:before{content:""!important;display:block!important;position:absolute;left:18px;top:50%;transform:translate(-50%,-50%);width:6px;height:6px;border-radius:50%;background:#fff!important;opacity:.95!important;box-shadow:none}
+  .nav-group[data-group="staff"] .subnav-item:hover,.nav-group[data-group="staff"] .subnav-item.active{background:rgba(255,255,255,.10);font-weight:400}
+  .nav-group[data-group="staff"] .subnav-item.active:before{opacity:1!important}
+}
